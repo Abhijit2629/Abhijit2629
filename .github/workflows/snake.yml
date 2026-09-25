@@ -16,14 +16,13 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      # Generate the contribution grid snake animation
+      # Generate the contribution grid snake animation with custom theme colors
       - name: generate-github-user-contribution-grid-snake-svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Abhijit2629
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?color_snake=#C19A6B&color_dots=#1C120C,#3D2314,#C19A6B,#E6C280,#FFFDD0
 
       # Push the generated SVG to the "output" branch
       - name: push github-contribution-grid-snake.svg to the output branch
