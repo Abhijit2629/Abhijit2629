@@ -50,7 +50,7 @@ I'm a passionate developer focused on building efficient software, solving compl
 <td width="40%" valign="middle" align="center">
 
 <img 
-  src="./developer-universe-compact.svg"
+  src="./gemini-svg.svg"
   width="390"
   alt="Developer Universe"
 />
