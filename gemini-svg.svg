@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#2D1A10" />
+      <stop offset="100%" stop-color="#1C120C" />
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Camel/Cream Gradients -->
+    <linearGradient id="camelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#C19A6B" />
+    </linearGradient>
+
+    <linearGradient id="creamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDD0" />
+      <stop offset="100%" stop-color="#F3E5AB" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A1B12" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#150D08" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="400" height="300" rx="16" fill="url(#bgGrad)" stroke="#C19A6B" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Decorative Orbit Lines -->
+  <circle cx="200" cy="150" r="110" fill="none" stroke="#C19A6B" stroke-width="1" stroke-dasharray="4 6" opacity="0.3"/>
+  <circle cx="200" cy="150" r="135" fill="none" stroke="#FFFDD0" stroke-width="1" stroke-dasharray="2 8" opacity="0.2"/>
+
+  <!-- Code Card Window (Center) -->
+  <g transform="translate(100, 75)">
+    <!-- Window Frame -->
+    <rect width="200" height="130" rx="10" fill="url(#cardGrad)" stroke="#C19A6B" stroke-width="1.5" filter="url(#glow)"/>
+    
+    <!-- Window Controls -->
+    <circle cx="16" cy="14" r="4" fill="#C19A6B"/>
+    <circle cx="28" cy="14" r="4" fill="#3D2314" stroke="#C19A6B" stroke-width="0.8"/>
+    <circle cx="40" cy="14" r="4" fill="#FFFDD0" opacity="0.6"/>
+    <line x1="10" y1="26" x2="190" y2="26" stroke="#C19A6B" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Code Syntax Mockup -->
+    <text x="16" y="46" font-family="'Fira Code', monospace" font-size="10" fill="#FFFDD0" opacity="0.9">&lt;<tspan fill="#C19A6B">Developer</tspan>&gt;</text>
+    
+    <rect x="26" y="55" width="80" height="6" rx="3" fill="#C19A6B" opacity="0.8"/>
+    <rect x="112" y="55" width="40" height="6" rx="3" fill="#FFFDD0" opacity="0.4"/>
+    
+    <rect x="26" y="68" width="50" height="6" rx="3" fill="#FFFDD0" opacity="0.5"/>
+    <rect x="82" y="68" width="70" height="6" rx="3" fill="#C19A6B" opacity="0.9"/>
+    
+    <rect x="26" y="81" width="110" height="6" rx="3" fill="#C19A6B" opacity="0.6"/>
+    
+    <text x="16" y="105" font-family="'Fira Code', monospace" font-size="10" fill="#FFFDD0" opacity="0.9">&lt;/<tspan fill="#C19A6B">Developer</tspan>&gt;</text>
+  </g>
+
+  <!-- Laptop Stand Illustration (Bottom Center) -->
+  <path d="M 140 215 L 260 215 L 280 230 L 120 230 Z" fill="url(#camelGrad)" opacity="0.85"/>
+  <rect x="180" y="222" width="40" height="3" rx="1.5" fill="#1C120C" opacity="0.6"/>
+
+  <!-- Floating Tech Nodes -->
+  <!-- Top Left Node: Code -->
+  <g transform="translate(50, 60)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="18" fill="#1C120C" stroke="#C19A6B" stroke-width="1.5"/>
+    <path d="M -6 -4 L -10 0 L -6 4 M 6 -4 L 10 0 L 6 4" stroke="#FFFDD0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Top Right Node: Database / Tech -->
+  <g transform="translate(340, 70)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="18" fill="#1C120C" stroke="#FFFDD0" stroke-width="1.5"/>
+    <path d="M -7 -5 C -7 -7, 7 -7, 7 -5 C 7 -3, -7 -3, -7 -5 Z M -7 -5 L -7 5 C -7 7, 7 7, 7 5 L 7 -5" stroke="#C19A6B" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Bottom Left Node: Rocket / Speed -->
+  <g transform="translate(60, 220)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="16" fill="#1C120C" stroke="#C19A6B" stroke-width="1.5"/>
+    <path d="M -4 4 L 0 -6 L 4 4 L 0 2 Z" fill="url(#creamGrad)"/>
+  </g>
+
+  <!-- Bottom Right Node: Binary/Algorithm -->
+  <g transform="translate(330, 210)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="16" fill="#1C120C" stroke="#C19A6B" stroke-width="1.5"/>
+    <text x="-7" y="4" font-family="'Fira Code', monospace" font-size="11" font-weight="bold" fill="#FFFDD0">{ }</text>
+  </g>
+
+  <!-- Sparkles & Accent Stars -->
+  <path d="M 120 40 L 122 45 L 127 47 L 122 49 L 120 54 L 118 49 L 113 47 L 118 45 Z" fill="#FFFDD0" opacity="0.8"/>
+  <path d="M 290 180 L 291 183 L 294 184 L 291 185 L 290 188 L 289 185 L 286 184 L 289 183 Z" fill="#C19A6B" opacity="0.9"/>
+</svg>
