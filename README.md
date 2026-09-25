@@ -96,7 +96,7 @@ I'm a passionate developer focused on building efficient software, solving compl
 
 <div align="center">
 
-<img src="./dist/snake.svg" width="100%" alt="Contribution Snake">
+<img src="https://raw.githubusercontent.com/Abhijit2629/Abhijit2629/output/github-contribution-grid-snake.svg" width="100%" alt="Contribution Snake">
 
 </div>
 
